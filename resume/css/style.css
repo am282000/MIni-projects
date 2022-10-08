@@ -1,0 +1,34 @@
+body{
+    background:#2c2c2e;
+}
+.bg-black{
+    background-color: black;
+}
+.bg-purple{
+    background-color: rgb(144, 30, 210);
+}
+.bg-brown{
+    background-color: brown;
+}
+.bg-pink{
+    background-color:#ec689b;
+}
+.bg-popat{
+    background-color: rgb(223, 95, 35);
+}
+.font-div{
+    width: 30%;
+}
+img{
+    width: 100%;
+    height:100%;
+}
+.cv{
+    color: black;
+}
+
+@media only screen and (min-width:1200px){
+    .font-div{
+        padding: 42.5px 0px!important;
+    }
+}

@@ -1,0 +1,25 @@
+#particles-js {
+    /* background: linear-gradient(to left, #ff6699 0%, #ffffcc 100%); */
+    background: linear-gradient(to left, #15a6ca 0%, #ffffcc 100%);
+}
+
+  
+#intro {
+    position: absolute;
+    top: 15%;
+    
+}
+
+#greet {
+    font-size: 60px;
+    font-weight: 200;
+    padding-left: 45%;
+}
+
+#name {
+    font-size: 130px;
+    font-weight: 400;
+    color: rgb(243, 8, 126);
+    padding-left: 200px;
+}
+

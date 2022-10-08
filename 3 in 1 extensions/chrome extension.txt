@@ -1,0 +1,111 @@
+<script src=".js" type="text/javascript" charset="utf-8">
+    // Manifest.JSON
+    {
+        "manifest_version":2,
+        "name":"Get Rid ",
+        "version":"0.1.0",
+        "content_scripts":[
+            {
+                "matches":["<all_urls>"],
+                "js":["script.js"],
+                "css":["style.css"]
+            }
+        ]
+    }
+</script>
+
+
+<!--script.js-->
+
+<script src=".js" type="text/javascript" charset="utf-8">
+    //Get Rid
+    replaceText(document.body)
+    
+    function replaceText(element){
+        if(element.hasChildNodes()){
+            element.childNodes.forEach(replaceText)
+        }elseif(element.nodeType === Text.TEXT_NODE){
+            if(element.textContent.match(/coronavirus/gi)){
+                // element.parentElement.style.color ='black'
+                // element.parentElement.style.backgroundColor = 'black' ''
+                const newElement = document.createElement('span')
+                newElement.innerHTML = element.textContent.replace(/coronavirus/gi,
+                '<span style="background-color:black;color:black;>$1</span>')
+                
+                element.replaceWith(newElement)
+            }
+            // element.textContent = element.textContent.replace(/coronavirus/gi,'❤️')
+        }
+    }
+    
+    //Remove
+    <script src=".js" type="text/javascript" charset="utf-8">
+    replaceText(document.body)
+    
+    function replaceText(element){
+        if(element.hasChildNodes()){
+            element.childNodes.forEach(replaceText)
+        }elseif(element.nodeType === Text.TEXT_NODE){
+            if(element.textContent.match(/coronavirus/gi)){
+                element.parentElement.remove()
+            }
+        }
+    }
+    
+    //highlight
+    <script src=".js" type="text/javascript" charset="utf-8">
+    replaceText(document.body)
+    
+    function replaceText(element){
+        if(element.hasChildNodes()){
+            element.childNodes.forEach(replaceText)
+        }elseif(element.nodeType === Text.TEXT_NODE){
+            if(element.textContent.match(/coronavirus/gi)){
+                const newElement = document.createElement('span')
+                newElement.innerHTML = element.textContent.replace(/coronavirus/gi,
+                '<span class="rainbow">$1</span>')
+                
+                element.replaceWith(newElement)
+            }
+        }
+    }
+</script>
+
+<!--style.css-->
+<html>
+
+
+
+.rainbow{
+    animation:rainbow 600ms;
+    animation-iteration-count:count;
+}
+
+@keyframes {
+    0% {
+        color:red;
+    }
+    15% {
+        color:orange;
+    }
+    30% {
+        color:yellow;
+    }
+    45% {
+        color:green;
+    }
+    60% {
+        color:blue;
+    }
+    75% {
+        color:indigo;
+    }
+    90% {
+        color:purple;
+    }
+}
+
+
+
+
+</html>

